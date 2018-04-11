@@ -1,0 +1,54 @@
+body, p, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Sans', sans-serif;
+    font-variant-ligatures: none;
+}
+
+a {
+    text-decoration: none;
+    transition: 230ms;
+}
+
+#navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(245, 245, 245, 0);
+}
+
+#navbar > ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#navbar > ul > li {
+    position: relative;
+    display: inline;
+}
+
+#navbar li:nth-child(n+2)::before {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    border-left: 1px solid #000;
+}
+
+#navbar li > a {
+    color: #3a3a3a;
+    font-size: 16pt;
+    padding: 8px;
+}
+
+
+#navbar li > a:hover {
+    background-color: #dfdfdf;
+}
+
+.container {
+    height: 100vh;
+}
