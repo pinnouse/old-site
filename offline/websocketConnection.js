@@ -13,7 +13,7 @@ $(function() {
 });
 
 function setupConnection() {
-    var connection = new WebSocket('ws://gnowbros-168818.appspot.com/');
+    var connection = new WebSocket('ws://35.193.146.111/');
 
     connection.onopen = function() {
         console.log((new Date) + ' opened session');
