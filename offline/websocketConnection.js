@@ -13,7 +13,7 @@ $(function() {
 });
 
 function setupConnection() {
-    var connection = new WebSocket('ws://offlinetvmockapp.azurewebsites.net');
+    var connection = new WebSocket('ws://gnowbros-168818.appspot.com/');
 
     connection.onopen = function() {
         console.log((new Date) + ' opened session');
