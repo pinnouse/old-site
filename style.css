@@ -1,3 +1,13 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+
+    margin: 0;
+}
+
 body, p, h1, h2, h3, h4, h5, h6 {
     font-family: 'Noto Sans', sans-serif;
     font-variant-ligatures: none;
@@ -8,8 +18,17 @@ a {
     transition: 230ms;
 }
 
+#hero {
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 14px;
+    font-weight: normal;
+}
+
 #navbar {
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -42,6 +61,7 @@ a {
     color: #3a3a3a;
     font-size: 16pt;
     padding: 8px;
+    border-radius: 3px;
 }
 
 
@@ -49,6 +69,63 @@ a {
     background-color: #dfdfdf;
 }
 
-.container {
-    height: 100vh;
+#pages {
+    position: relative;
+    display: block;
+    max-width: 60vh;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#pages > div {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    transition: 330ms;
+}
+
+#social a {
+    position: relative;
+    display: block;
+    color: #3a3a3a;
+    padding: 6px 0;
+    margin-bottom: 4px;
+}
+
+#social a:hover {
+    color: #fff;
+}
+
+#social a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: #eee;
+}
+
+#social a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    z-index: -1;
+
+    background-color: #ccc;
+    transition: 260ms;
+}
+
+#social a:hover::after {
+    width: 100%;
+    background-color: #333;
+}
+
+#about p {
+    text-align: center;
+    white-space: pre-wrap;
 }
