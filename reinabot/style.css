@@ -1,0 +1,389 @@
+body {
+    margin: 0;
+    color: #fff;
+    background-color: #283046;
+    font-variant-ligatures: none;
+    font-family: 'Muli', Geneva, Verdana, sans-serif;
+}
+
+body .background {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url("Reina_Kousaka.jpg") no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(0px);
+    margin: 0;
+}
+
+nav {
+    z-index: 2;
+    position: fixed;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.container  {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    line-height: 1.5;
+}
+
+.bot-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 200px;
+    display: block;
+    background-color: rgba(35, 36, 37, 0.47);
+    margin: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.4);
+    transition-duration: .23s;
+}
+
+.bot-container:hover {
+    background-color: rgba(24, 24, 24, 0.78);
+}
+
+.right {
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+    position: fixed;
+    right: 32px;
+    width: 60%;
+    margin: 0;
+    padding: 32px 16px;
+    transition: .23s;
+}
+
+.right > h1 {
+    display: inline;
+    font-weight: normal;
+    font-size: 32px;
+    transition: .23s;
+}
+
+.right > ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.right > ul > li {
+    display: inline;
+}
+
+.left {
+    position: relative;
+    top: 0;
+    display: inline-block;
+    margin: 0px 64px;
+    height: inherit;
+}
+
+.left > img {
+    opacity: 1;
+    height: 168px;
+    margin: 16px 0;
+    display: block;
+    border-radius: 50%;
+    transition: .23s;
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.6);
+}
+
+a {
+    position: relative;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    display: inline;
+    cursor: pointer;
+    padding: 16px;
+    transition: .2s;
+    margin: 0 4px;
+}
+
+li>a {
+    background: none;
+}
+
+li:nth-child(n+2)>a::before {
+    content: "";
+    position: absolute;
+    cursor: default;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin-left: -8px;
+    border-left: 2px solid #ccc;
+}
+
+a:hover {
+    background-color: rgba(0, 0, 0, 0.66);
+}
+
+.content-block {
+    color: #222;
+    position: relative;
+    padding-bottom: 64px;
+    box-shadow: 0 6px 8px 2px rgba(0, 0, 0, 0.26);
+    text-align: center;
+    transition: .46s;
+    overflow: hidden;
+}
+
+.content-block::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: -1;
+}
+
+.content-block h1 {
+    text-align: center;
+    color: #000;
+    border-bottom: 2px solid #000;
+    width: 78vw;
+    padding-bottom: 6px;
+    margin: 32px auto;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.84);
+    box-shadow: 1px 4px 4px -4px rgba(0, 0, 0, 0.84);
+}
+
+#top {
+    height: 83vh;
+}
+
+#description {
+    width: 100%;
+    color: #222;
+}
+
+#description::before {
+    background-color: rgba(255, 255, 255, 0.84);
+}
+
+#description p {
+    color: #111;
+}
+
+#description span {
+    color: #222;
+    background-color: #aaaaaaa0;
+    line-height: 1.7em;
+    padding: 0 2px 2px 2px;
+    border-radius: 2px;
+    transition: .2s;
+}
+
+#description span:hover {
+    cursor: default;
+    background-color: #808388a0;
+}
+
+#description ul {
+    margin: 0 40vw;
+    text-align: center;
+    list-style-type: square;
+}
+
+#description ul > li {
+    text-align: left;
+}
+
+#help {
+    color: #fff;
+}
+
+#help::before {
+    background-color: #30303f60;
+}
+
+#help > h1 {
+    color: #fff;
+    border-color: #fff;
+}
+
+#help p > span {
+    color: #222;
+    background-color: rgba(204, 204, 204, 0.565);
+    padding: 0 2px 2px 2px;
+    border-radius: 2px;
+    transition: .2s;
+}
+
+#help p > span:hover {
+    cursor: default;
+    background-color: rgba(255, 255, 255, 0.565);
+}
+
+#help span[aria-label]:hover::after {
+    content: attr(aria-label);
+    position: absolute;
+    right: -24px;
+    top: 26px;
+    z-index: 1;
+    padding: 0 4px;
+    font-size: 11px;
+    color: #fff;
+    background-color: #000;
+    animation: labelIn 290ms ease-in-out;
+    white-space: nowrap;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px 1px rgba(220, 220, 220, 0.13);
+}
+
+@keyframes labelIn {
+    0% {
+        opacity: 0;
+        top: 20px;
+        border-radius: 2px 2px 50% 50%;
+    }
+    100% {
+        opacity: 1;
+        top: 26px;
+        border-radius: 4px;
+    }
+}
+
+h2 {
+    font-size: 1.6em;
+    margin-top: 64px;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.18);
+}
+
+table, th, td {
+    border-collapse: collapse;
+}
+
+table {
+    color: #000;
+    margin: 0 auto;
+    table-layout: fixed;
+    width: 70vw;
+    box-shadow: 2px 3px 6px 0 rgba(0, 0, 0, 0.25);
+}
+
+table th:nth-child(1) {
+    width: 20%;
+}
+
+table th:nth-child(2) {
+    width: 50%;
+}
+
+table th:nth-child(3) {
+    width: 15%;
+}
+
+table th:nth-child(4) {
+    width: 15%;
+}
+
+tr {
+    background-color: rgba(230, 231, 233, 0.72);
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.72);
+}
+
+th {
+    color: #eee;
+    background-color: #737680;
+    font-weight: normal;
+    font-size: 1.3em;
+    border: none;
+}
+
+th:first-child, th:first-child {
+    min-width: 20%;
+}
+
+th, td {
+    line-height: 1.5em;
+    padding: 16px;
+}
+
+td {
+    border: 1px solid rgb(153, 153, 153);
+}
+
+td:nth-child(1) {
+    border-left: none;
+}
+
+td:nth-last-child(1) {
+    border-right: none;
+}
+
+td:nth-child(-n+4) {
+    border-top: none;
+}
+
+tr:nth-last-child(1) td {
+    border-bottom: none;
+}
+
+tr > td > span {
+    color: #004;
+    cursor: default;
+    background-color: rgba(129, 129, 129, 0.627);
+    line-height: 1.7em;
+    padding: 0 2px 2px 2px;
+    border-radius: 2px;
+    transition: .2s;
+    position: relative;
+}
+
+tr:nth-child(even) > td > span {
+    background-color: rgba(148, 148, 148, 0.627);
+}
+
+tr > td > span:hover {
+    cursor: default;
+    background-color: rgba(108, 109, 112, 0.627);
+}
+
+#footer {
+    color: #fff;
+    overflow: hidden;
+    margin: 0;
+    z-index: 1;
+    padding: 64px 0 18px 0;
+    text-align: center;
+    box-shadow: 0px -4px 8px 2px rgba(0, 0, 0, 0.223);
+}
+
+#footer::before {
+    background-color: #222;
+}
+
+footer {
+    margin-top: 96px;
+    padding: 0;
+    font-size: 12px;
+    color: #888;
+}
+
+::-webkit-scrollbar {
+   display: none; 
+}
