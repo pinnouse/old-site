@@ -6,6 +6,8 @@ body {
     height: 100vh;
 
     margin: 0;
+    color: rgb(194, 194, 194);
+    background-color: rgb(31, 31, 31);
 }
 
 body, p, h1, h2, h3, h4, h5, h6 {
@@ -20,6 +22,7 @@ a {
 
 #hero {
     text-align: center;
+    max-width: 60vh;
 }
 
 #hero h2 {
@@ -34,7 +37,7 @@ a {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    background-color: rgba(245, 245, 245, 0);
+    background-color: rgba(245, 245, 245, 0.288);
 }
 
 #navbar > ul {
@@ -54,11 +57,11 @@ a {
     top: 0;
     width: 1px;
     height: 100%;
-    border-left: 1px solid #000;
+    border-left: 1px solid rgb(194, 194, 194);
 }
 
 #navbar li > a {
-    color: #3a3a3a;
+    color: #bdbdbd;
     font-size: 16pt;
     padding: 8px;
     border-radius: 3px;
@@ -66,13 +69,14 @@ a {
 
 
 #navbar li > a:hover {
-    background-color: #dfdfdf;
+    color: rgb(70, 70, 70);
+    background-color: #afafaf;
 }
 
 #pages {
     position: relative;
     display: block;
-    max-width: 60vh;
+    max-width: 100%;
     overflow: hidden;
     white-space: nowrap;
 }
@@ -87,13 +91,13 @@ a {
 #social a {
     position: relative;
     display: block;
-    color: #3a3a3a;
+    color: #bebebe;
     padding: 6px 0;
     margin-bottom: 4px;
 }
 
 #social a:hover {
-    color: #fff;
+    color: rgb(34, 34, 34);
 }
 
 #social a::before {
@@ -104,7 +108,7 @@ a {
     right: 0;
     bottom: 0;
     z-index: -1;
-    background-color: #eee;
+    background-color: rgb(31, 31, 31);
 }
 
 #social a::after {
@@ -116,13 +120,13 @@ a {
     width: 10px;
     z-index: -1;
 
-    background-color: #ccc;
+    background-color: rgb(66, 66, 66);
     transition: 260ms;
 }
 
 #social a:hover::after {
     width: 100%;
-    background-color: #333;
+    background-color: rgb(204, 204, 204);
 }
 
 #about p {
