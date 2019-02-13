@@ -149,7 +149,7 @@ $(function() {
 });
 
 function setupConnection() {
-    var connection = new WebSocket('ws://34.73.180.39:8080/');
+    var connection = new WebSocket('ws://34.73.180.39:8080');
 
     connection.onopen = function() {
         console.log((new Date) + ' opened session');
