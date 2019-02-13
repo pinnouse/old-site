@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  height: 100%;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #ffffff;
+  color: #a4a4a4;
+}
+
+header {
+  text-align: center;
+}
+
+header > * {
+  position: relative;
+  top: 0;
+  opacity: 0;
+  animation: fadeup 340ms cubic-bezier(0.165, 0.84, 0.44, 1) 260ms forwards;
+}
+
+header > h1 {
+  margin-top: 0;
+  animation: fadeup 340ms cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+header > h3 {
+  animation: fadeup 340ms cubic-bezier(0.165, 0.84, 0.44, 1) 130ms forwards;
+}
+
+header a {
+  color: #b6b6b6;
+}
+
+.card {
+  position: relative;
+  display: block;
+  width: 600px;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #ececec;
+  margin: 0 auto;
+  text-align: center;
+  opacity: 0;
+  animation: fadeup 440ms cubic-bezier(0.165, 0.84, 0.44, 1) 390ms forwards;
+}
+
+.card a {
+  color: #777777;
+  background-color: #dfdfdf;
+  padding: 3px;
+  transition: 260ms;
+  border-radius: 3px;
+}
+
+.card.no-button a:hover {
+  background-color: #ffffff;
+}
+
+.card:not(.no-button) a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  width: 30%;
+  border-radius: 5px;
+  background-color: #b8b8b8;
+}
+
+.card h2 {
+  position: relative;
+  font-size: 19pt;
+}
+
+.card:not(.no-button) a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  opacity: 0.78;
+  transition: 230ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card a:hover::after {
+  height: 0;
+}
+
+.card ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card li {
+  margin: 14px;
+  font-size: 14pt;
+}
+
+.card:not(.no-button) li a {
+  padding: 18px;
+}
+
+@keyframes fadeup {
+  0% {
+    top: 100px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
