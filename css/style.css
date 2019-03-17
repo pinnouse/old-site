@@ -1,5 +1,11 @@
+/**********
+  IMPORTS
+**********/
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 
+/******************
+  GENERAL STYLING
+******************/
 html {
   height: 100%;
 }
@@ -8,12 +14,20 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 0;
+  margin: 100px auto;
   height: 100%;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
   background-color: #ffffff;
   color: #a4a4a4;
+}
+
+body:not(.list) {
+  margin: 0;
+  justify-content: center;
+}
+
+body.night {
+  background-color: #1d1b1a;
 }
 
 header {
@@ -40,6 +54,27 @@ header a {
   color: #b6b6b6;
 }
 
+#night-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 8px;
+  border-radius: 3px;
+  background-color: #2c2c2c;
+  cursor: pointer;
+  transition: 
+    color 230ms,
+    background-color 230ms;
+}
+
+#night-button:hover {
+  color: #ffffff;
+  background-color: #808080;
+}
+
+/***************
+  CARD STYLING
+***************/
 .card {
   position: relative;
   display: block;
@@ -47,21 +82,71 @@ header a {
   border-radius: 20px;
   padding: 20px;
   background-color: #ececec;
-  margin: 0 auto;
+  margin: 18px auto;
   text-align: center;
   opacity: 0;
   animation: fadeup 440ms cubic-bezier(0.165, 0.84, 0.44, 1) 390ms forwards;
+}
+
+body.night .card {
+  background-color: #4d4c4a;
+}
+
+.card.left,
+.card.right {
+  width: auto;
+  margin: 18px 18vw;
+}
+
+.card.left {
+  text-align: left;
+}
+
+.card.right {
+  text-align: right;
+}
+
+.card > h2 {
+  position: relative;
+  font-size: 19pt;
+}
+
+.card > h4 {
+  font-size: 18pt;
+}
+
+.card > h5 {
+  margin-bottom: 4px;
+  font-size: 14pt;
+  text-align: left;
+}
+
+.card > p {
+  margin-top: 4px;
+  text-indent: 18px;
+  line-height: 1.7;
+  text-align: left;
 }
 
 .card a {
   color: #777777;
   background-color: #dfdfdf;
   padding: 3px;
-  transition: 260ms;
+  transition: 
+    background-color 260ms, 
+    width 160ms, 
+    padding 210ms, 
+    font-size 210ms;
   border-radius: 3px;
 }
 
+body.night .card a {
+  color: #bcbcbc;
+  background-color: #5f5d5d;
+}
+
 .card.no-button a:hover {
+  color: #626262;
   background-color: #ffffff;
 }
 
@@ -72,12 +157,7 @@ header a {
   color: #ffffff;
   width: 30%;
   border-radius: 5px;
-  background-color: #b8b8b8;
-}
-
-.card h2 {
-  position: relative;
-  font-size: 19pt;
+  background-color: #d1d1d1;
 }
 
 .card:not(.no-button) a::after {
@@ -88,16 +168,16 @@ header a {
   height: 100%;
   width: 100%;
   border-radius: 5px;
-  background-color: #f5f5f5;
-  opacity: 0.78;
-  transition: 230ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  background-color: #b8b8b8;
+  opacity: 0.28;
+  transition: height 230ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .card a:hover::after {
   height: 0;
 }
 
-.card ul {
+.card > ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -108,10 +188,13 @@ header a {
   font-size: 14pt;
 }
 
-.card:not(.no-button) li a {
+.card:not(.no-button) li > a {
   padding: 18px;
 }
 
+/*************
+  ANIMATIONS  
+*************/
 @keyframes fadeup {
   0% {
     top: 100px;
@@ -120,5 +203,30 @@ header a {
   100% {
     top: 0;
     opacity: 1;
+  }
+}
+
+/*****************
+  RESPONSIVENESS
+*****************/
+@media only screen and (max-width: 750px) {
+  .card {
+    width: 80vw !important;
+  }
+
+  .card:not(.no-button) > a {
+    display: block !important;
+    width: 100%;
+    margin: 12px 0;
+  }
+
+  .card.no-button > a {
+    padding: 12px;
+    font-size: 15pt;
+  }
+
+  .card.left,
+  .card.right {
+    max-width: 64vw;
   }
 }

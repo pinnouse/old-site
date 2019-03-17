@@ -8,21 +8,93 @@
     <title>GnowBros</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <script src="js/index.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/instantclick.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
+  <body class="list">
+    <span id="night-button">D</span>
     <header>
       <h1>Projects</h1>
-      <h3>A list of projects I've worked on and may have completed.</h3>
+      <h3>
+        A list of projects I've worked on and may have completed.
+        <br />
+        You could call it my portfolio I guess.
+      </h3>
     </header>
-    <div class="card">
-      <ul>
-        <li><a href="http://zerotwo.gnowbros.com">Zero Two Bot</a></li>
-        <li><a href="proj/offline">OfflineTV Fan Site</a></li>
-        <li><a href="https://pinnouse.github.io/ICSFinal">Gr 12 Computer Science Final Project</a></li>
-        <li><a href="https://github.com/pinnouse/ReinaChat">Reina Chat</a></li>
-        <li><a href="proj/reinabot">Reina Bot</a></li>
-      </ul>
+    <div id="simpleplayer" class="card left no-button">
+      <h4>Simple Player</h4>
+      <h5>Description</h5>
+      <p>
+        Simple Player is a quick and efficient music player written in C++ and SDL.
+      </p>
+      <h5>Purpose</h5>
+      <p>
+        I wanted to build a very efficient and lightweight music player.
+        I was hoping to solve the need for a beautiful, customizable, and lightning quick player that felt modern and friendly.
+      </p>
+      <a href="https://github.com/pinnouse/SimplePlayer">GitHub Repo</a>
+    </div>
+    <div id="zerotwo" class="card right no-button">
+      <h4>Zero Two Bot</h4>
+      <h5>Description</h5>
+      <p>
+        Discord bot made with 💖.
+        Includes an AI chatbot and hosted 24/7.
+        The core bot was written in <a href="https://nodejs.org">node.js</a>.
+      </p>
+      <h5>Purpose</h5>
+      <p>
+        I wanted to create a production ready service that I personally loved (both the character and the project itself).
+        I try to use best practices and deployment solutions to create a top notch niche project.
+        This is one of my proudest feats because of its functionality and the experience I've gained.
+      </p>
+      <a href="http://zerotwo.gnowbros.com">Home Page</a>
+    </div>
+    <div id="otv" class="card left no-button">
+      <h4>OfflineTV Fan Site</h4>
+      <h5>Description</h5>
+      <p>
+        A personal project for fun to try out some web design built from the base up.
+      </p>
+      <h5>Purpose</h5>
+      <p>
+        I wanted to try my hand at web design whilst keeping the product within my interests and supporting group I love.
+        Through this, I unintendingly learned to create web sockets to interact with the Twitch API and host a web socket server.
+      </p>
+      <a href="proj/offline">Live Website</a>
+    </div>
+    <div id="ics" class="card right no-button">
+      <h4>Gr 12 Computer Science Final Project</h4>
+      <h5>Description</h5>
+      <p>
+        A project that I worked with a partner with. This was a two part project.
+      </p>
+      <h5>Purpose</h5>
+      <p>
+        Well it was a school project and I just wanted to work on something with my friend.
+        I was able to flex my web design skills while maintaining a modern, usable interface.
+      </p>
+      <a href="https://pinnouse.github.io/ICSFinal">Live Website</a>
+    </div>
+    <div id="reina" class="card left no-button">
+      <h4>Reina Bot/Chat</h4>
+      <h5>Description</h5>
+      <p>
+        These two projects were created in tandem when I was first getting into web services.
+      </p>
+      <h5>Reina Bot</h5>
+      <p>
+        Reina Bot was my first full attempt at pushing a Discord bot into production. The working bot is the <a href="#zerotwo">zero two bot</a> as seen above.
+      </p>
+      <h5>Reina Chat</h5>
+      <p>
+        Reina Chat is my currently in use service for the AI chatbot my Discord bots use. This was my attempt at learning Machine Learning/Artificial Intelligence.
+      </p>
+      <a href="proj/reinabot">Reina Bot</a>
+      <a href="https://github.com/pinnouse/ReinaChat">Reina Chat</a>
     </div>
   </body>
 </html>
