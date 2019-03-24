@@ -7,7 +7,7 @@ window.onload = function() {
 
   document.getElementById("night-button").onclick = function() {
     if (localStorage) {
-      if (!localStorage.getItem("night") || localStorage.getItem("night") === 'on')
+      if (localStorage.getItem("night") === 'on')
         localStorage.setItem("night", 'off');
       else
         localStorage.setItem("night", 'on');
