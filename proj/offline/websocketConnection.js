@@ -46,6 +46,22 @@ var main = [
         "twitter": "scarra",
         "instagram": "scarraa",
         "facebook": "scarraofficial"
+    },
+    {
+        "name": "TheeMarkZ",
+        "twitch": "theemarkz",
+        "youtube": "channel/UCU74OVWGSmJqR1g6y-tgUHQ",
+        "twitter": "TheeMarkZ",
+        "instagram": "theemarkz",
+        "facebook": "theemarkz"
+    },
+    {
+        "name": "Xell",
+        "twitch": "xell",
+        "youtube": "user/OfficialXell",
+        "twitter": "XellTweets",
+        "instagram": "xellgrams",
+        "facebook": "LoLXell"
     }
 ];
 
@@ -71,22 +87,6 @@ var side = [
         "twitter": "THEalbertchang",
         "instagram": "sleightlymusical",
         "facebook": "sleightlymusical"
-    },
-    {
-        "name": "TheeMarkZ",
-        "twitch": "theemarkz",
-        "youtube": "channel/UCU74OVWGSmJqR1g6y-tgUHQ",
-        "twitter": "TheeMarkZ",
-        "instagram": "theemarkz",
-        "facebook": "theemarkz"
-    },
-    {
-        "name": "Xell",
-        "twitch": "xell",
-        "youtube": "user/OfficialXell",
-        "twitter": "XellTweets",
-        "instagram": "xellgrams",
-        "facebook": "LoLXell"
     }
 ];
 
@@ -149,7 +149,7 @@ $(function() {
 });
 
 function setupConnection() {
-    var connection = new WebSocket('ws://34.73.180.39:8080');
+    var connection = new WebSocket('wss://serve.gnowbros.com:8080');
 
     connection.onopen = function() {
         console.log((new Date) + ' opened session');
@@ -178,7 +178,7 @@ function setupConnection() {
     }
 
     connection.onerror = function(error) {
-        console.log(error);
+        //console.log(error);
     }
 
     return connection;

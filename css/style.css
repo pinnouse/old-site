@@ -21,6 +21,10 @@ body {
   color: #a4a4a4;
 }
 
+a {
+  color: #a4a4a4;
+}
+
 body:not(.list) {
   margin: 0;
   justify-content: center;
@@ -54,6 +58,21 @@ header a {
   color: #b6b6b6;
 }
 
+#back-button {
+  z-index: 100;
+  position: fixed;
+  top: 10px;
+  left: 35px;
+  padding: 8px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #2c2c2c;
+  cursor: pointer;
+  transition: 
+    color 230ms,
+    background-color 230ms;
+}
+
 #night-button {
   z-index: 100;
   position: fixed;
@@ -68,6 +87,7 @@ header a {
     background-color 230ms;
 }
 
+#back-button:hover,
 #night-button:hover {
   color: #ffffff;
   background-color: #808080;
@@ -107,22 +127,22 @@ body.night .card {
   text-align: right;
 }
 
-.card > h2 {
+.card h2 {
   position: relative;
   font-size: 19pt;
 }
 
-.card > h4 {
+.card h4 {
   font-size: 18pt;
 }
 
-.card > h5 {
-  margin-bottom: 4px;
+.card h5 {
+  margin: 4px;
   font-size: 14pt;
   text-align: left;
 }
 
-.card > p {
+.card p {
   margin-top: 4px;
   text-indent: 18px;
   line-height: 1.7;
@@ -191,6 +211,25 @@ body.night .card a {
 
 .card:not(.no-button) li > a {
   padding: 18px;
+}
+
+.card.left > .content,
+.card.left > img,
+.card.right > .content,
+.card.right > img {
+  display: inline-block;
+  width: 45%;
+  margin: 0 2%;
+  vertical-align: top;
+}
+
+.card.left > img,
+.card.right > img {
+  border-radius: 4px;
+}
+
+.card.right > .content {
+  float: right;
 }
 
 /*************
