@@ -268,5 +268,33 @@ body.night .card a {
   .card.left,
   .card.right {
     max-width: 64vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card.no-button > img {
+    order: 1;
+    width: 100%;
+    margin: 0;
+  }
+
+  .card.no-button > h4 {
+    order: 2;
+    width: 100%;
+    text-align: center;
+  }
+
+  .card.no-button > .content {
+    order: 3;
+    width: 100%;
+  }
+
+  .content > h5:nth-child(n + 3),
+  .content > p:nth-child(n + 4) {
+    display: none;
+  }
+
+  .content {
+    text-align: left;
   }
 }
