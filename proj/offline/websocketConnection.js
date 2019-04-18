@@ -149,7 +149,7 @@ $(function() {
 });
 
 function setupConnection() {
-    var connection = new WebSocket('wss://serve.gnowbros.com:8080');
+    var connection = new WebSocket('wss://serve.gnowbros.com:443');
 
     connection.onopen = function() {
         console.log((new Date) + ' opened session');
