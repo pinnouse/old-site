@@ -9,14 +9,10 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-    <script src="js/index.js"></script>
-    <script src="js/projects.js"></script>
-    <script src="js/instantclick.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="list">
-    <span id="night-button">D</span>
-    <a href="./"><span id="back-button">Back</span></a>
     <header>
       <h1>Projects</h1>
       <h3>
@@ -30,12 +26,15 @@
       <div class="content">
         <h5>Description</h5>
         <p>
-          Sgnow (pronounced 'snow') is a quick and efficient music player written in C++ and SDL.
+          Sgnow (pronounced 'snow') is a quick and efficient music player written in Rust and NodeJS.
         </p>
         <h5>Purpose</h5>
         <p>
-          I wanted to build a very efficient and lightweight music player.
-          I was hoping to solve the need for a beautiful, customizable, and lightning quick player that felt modern and friendly.
+          Create a beautiful music player that's customizable and extensible
+          with a small memory footprint. Of course the irony is using
+          <a href="electronjs.org">electron</a> for the frontend, but there are
+          no native alternatives otherwise that offer such a high degree of
+          accessibility.
         </p>
         <a href="https://github.com/pinnouse/Sgnow">GitHub Repo</a>
       </div>
@@ -51,9 +50,11 @@
         </p>
         <h5>Purpose</h5>
         <p>
-          I wanted to create a production ready service that I personally loved (both the character and the project itself).
-          I try to use best practices and deployment solutions to create a top notch niche project.
-          This is one of my proudest feats because of its functionality and the experience I've gained.
+          I wanted to create a production ready service that I personally loved
+          (both the character and the project itself). I try to use best
+          practices and deployment solutions to create a top notch niche
+          project. This is one of my proudest feats because of its functionality
+          and the experience I've gained.
         </p>
         <a href="https://zerotwo.gnowbros.com">Home Page</a>
       </div>
@@ -69,8 +70,10 @@
         </p>
         <h5>Purpose</h5>
         <p>
-          Create a public face for the club with the goal of attracting potential sponsors and partners.
-          I wanted to really capture the uniqueness of our and an SPA application-like website sounded appealing.
+          Create a public face for the club with the goal of attracting
+          potential sponsors and partners. I wanted to really capture
+          the uniqueness of our and an SPA application-like website sounded
+          appealing.
         </p>
         <a href="http://uhsrobotics.org">Website</a>
       </div>
@@ -81,12 +84,15 @@
       <div class="content">
         <h5>Description</h5>
         <p>
-          A personal project for fun to try out some web design built from the base up.
+          A personal project for fun to try out some web design built from the
+          base up.
         </p>
         <h5>Purpose</h5>
         <p>
-          I wanted to try my hand at web design whilst keeping the product within my interests and supporting group I love.
-          Through this, I unintendingly learned to create web sockets to interact with the Twitch API and host a web socket server.
+          I wanted to try my hand at web design whilst keeping the product
+          within my interests and supporting group I love. Through this, I
+          unintendingly learned to create web sockets to interact with the
+          Twitch API and host a web socket server.
         </p>
         <a href="proj/offline">Live Website</a>
       </div>
@@ -97,12 +103,14 @@
       <div class="content">
         <h5>Description</h5>
         <p>
-          A project that I worked with a partner with. This was a two part project.
+          A project that I worked with a partner with. This was a two part
+          project.
         </p>
         <h5>Purpose</h5>
         <p>
-          Well it was a school project and I just wanted to work on something with my friend.
-          I was able to flex my web design skills while maintaining a modern, usable interface.
+          Well it was a school project and I just wanted to work on something
+          with my friend. I was able to flex my web design skills while
+          maintaining a modern, usable interface.
         </p>
         <a href="https://pinnouse.github.io/ICSFinal">Live Website</a>
       </div>
@@ -113,20 +121,30 @@
       <div class="content">
         <h5>Description</h5>
         <p>
-          These two projects were created in tandem when I was first getting into web services.
+          These two projects were created in tandem when I was first getting
+          into web services.
         </p>
         <h5>Reina Bot</h5>
         <p>
-          Reina Bot was my first full attempt at pushing a Discord bot into production. The working bot is the <a href="#zerotwo">zero two bot</a> as seen above.
+          Reina Bot was my first full attempt at pushing a Discord bot into
+          production. The working bot is the <a href="#zerotwo">zero two bot</a>
+          as seen above.
         </p>
         <h5>Reina Chat</h5>
         <p>
-          Reina Chat is my currently in use service for the AI chatbot my Discord bots use. This was my attempt at learning Machine Learning/Artificial Intelligence.
+          Reina Chat is my currently in use service for the AI chatbot my
+          Discord bots use. This was my attempt at learning Machine
+          Learning/Artificial Intelligence.
         </p>
         <a href="proj/reinabot">Reina Bot</a>
         <a href="https://github.com/pinnouse/ReinaChat">Reina Chat</a>
       </div>
       <img src="img/gnowbros.com_proj_reinabot_.png">
     </div>
+    <span id="night-button" class="nav-button">D</span>
+    <a href="./"><span id="back-button" class="nav-button">Back</span></a>
+    <script src="js/index.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/instantclick.min.js"></script>
   </body>
 </html>
